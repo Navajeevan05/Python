@@ -1,0 +1,15 @@
+def print_survey_numbers(district, mandal, village):
+    try:
+        surveys = data[district][mandal][village]
+        print("Survey numbers for District '{}', Mandal '{}', Village '{}':".format(district, mandal, village))
+        for survey in surveys:
+            print("- " + survey)
+    except KeyError:
+        print("Invalid input. Please check the spelling or try another combination.")
+
+# Test the function
+district = input("Enter District: ")
+mandal = input("Enter Mandal: ")
+village = input("Enter Village: ")
+
+print_survey_numbers(district, mandal, village)
